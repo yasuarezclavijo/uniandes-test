@@ -1,0 +1,26 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_age
+    - node.type.employee
+  enforced:
+    module:
+    - employees
+id: node.employee.field_ages
+field_name: field_age
+entity_type: node
+bundle: employee
+label: Age
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+locked: false
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

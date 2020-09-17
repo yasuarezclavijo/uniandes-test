@@ -1,0 +1,22 @@
+{
+  "name": "test/uniandes",
+  "description": "Manager employees",
+  "type": "drupal-module",
+  "keywords": ["Drupal", "Uniandes"],
+  "homepage": "https://github.com/yasuarezclavijo/uniandes-test.git",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Yeison Andres Suarez Clavijo",
+      "homepage": "https://www.drupal.org/u/eme",
+      "role": "Author"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/yasuarezclavijo/uniandes-test.git",
+    "source": "https://github.com/yasuarezclavijo/uniandes-test.git"
+  },
+  "require": {
+    "drupal/core": "^8.8"
+  }
+}

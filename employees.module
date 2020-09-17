@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function employees_theme() {
+  return [
+    'salaries_terms' => [
+      'template' => 'links_taxonomy',
+      'variables' => ['links' => NULL],
+    ],
+  ];
+}

@@ -1,0 +1,6 @@
+employees.admin_settings_form:
+  title: 'Settings employees'
+  parent: system.admin_config_system
+  description: 'You can set the employee configuration module.'
+  route_name: employees.admin_settings_form
+  weight: 10

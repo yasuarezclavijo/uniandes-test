@@ -1,0 +1,31 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_salary_type
+    - node.type.employee
+    - taxonomy.vocabulary.salary_types
+  enforced:
+    module:
+    - employees
+id: node.employee.field_salary_type
+field_name: field_salary_type
+entity_type: node
+bundle: employee
+label: 'Salary type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      salary_types: salary_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,7 @@
+name: 'Employees'
+type: module
+description: 'Module test uniandes'
+package: 'Uniandes'
+core: '8.x'
+dependencies:
+    - taxonomy

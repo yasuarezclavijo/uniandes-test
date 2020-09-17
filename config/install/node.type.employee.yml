@@ -1,0 +1,11 @@
+langcode: en
+dependencies:
+  enforced:
+    module:
+    - employees
+name: 'Employee'
+type: employee
+description: 'Save employees.'
+help: 'Load with REST service.'
+new_revision: false
+preview_mode: 1

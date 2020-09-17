@@ -1,0 +1,49 @@
+<?php
+
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Implements hook_install().
+ */
+function employees_install() {
+  // Machine name of the Taxonomy vocabulary.
+  $vocab = 'salary_types';
+
+  // Term names to be added.
+  $items = [
+    'Salario Bajo',
+    'Salario Medio',
+    'Salario Alto',
+  ];
+  foreach ($items as $item) {
+    $term = Term::create([
+      'parent' => [],
+      'name' => $item,
+      'vid' => $vocab,
+    ])->save();
+  }
+  $view_id = 'frontpage';
+  $view = \Drupal::entityTypeManager()->getStorage('view')->load($view_id);
+  $view->setStatus(FALSE);
+  $view->save();
+}
+
+
+/**
+ * Implements hook_uninstall().
+ */
+function employees_uninstall() {
+  // Machine name of the Taxonomy vocabulary.
+  $vocab = 'salary_types';
+  $tids = \Drupal::entityQuery('taxonomy_term')
+    ->condition('vid', $vocab)
+    ->execute();
+
+  $taxonomy = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+  $terms = $taxonomy->loadMultiple($tids);
+  $taxonomy->delete($terms);
+  $view_id = 'frontpage';
+  $view = \Drupal::entityTypeManager()->getStorage('view')->load($view_id);
+  $view->setStatus(TRUE);
+  $view->save();
+}

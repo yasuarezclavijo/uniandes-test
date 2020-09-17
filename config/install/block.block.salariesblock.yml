@@ -1,0 +1,20 @@
+langcode: es
+status: true
+dependencies:
+  module:
+    - employees
+  theme:
+    - bartik
+id: salariesblock
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: salaries_block
+settings:
+  id: salaries_block
+  label: Salaries
+  provider: employees
+  label_display: visible
+  taxonomySelect: salary_types
+visibility: {  }

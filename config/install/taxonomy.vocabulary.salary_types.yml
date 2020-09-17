@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - employees
+name: Salary Types
+vid: salary_types
+description: 'Salary Types'
+hierarchy: 0
+weight: 0
